@@ -1,0 +1,109 @@
+                                                                                     COVID-19 Classifier
+										----------------------------
+
+Hi mam,
+
+Sorry for the delay mam,
+
+I have preprocessed and built the models within 2 days mam , but the problem is that the accuracy and f1 score was low, so that only I was unable to submit to you mam
+
+Now after I did some changes now its working properly with best accuracy and f1-score of 100 % mam.
+
+Mam I worked on Xray images and I asked Shriram to do the CT scan image dataset mam
+
+Dataset Information:
+---------------------
+
+1.I took the Covid(pos) from the dataset that you had sent mam ,for Covid(neg) I saw the research paper and took those normal sample pics from kaggle chest xray pneumonia samples, I took 50 Covid and 50 Normal patient pics and then split it into  80:20 ratio mam.
+Dataset Information:https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+In this first project I used VGG19,VGG16,ResNet50,DenseNet201,Xception,InceptionResNetV2.
+
+
+2.I took the dataset that you had sent mam did it with VGG19 classifier for categorizing Covid-19 among various diseases with respect to lung xray images
+
+
+3.I took kaggle dataset of Covid_19_classifier in which images of Covid-19,normal,pneumonia images were given and I used InceptionV3 classifier for that
+Dataset Information:https://www.kaggle.com/rgaltro/newdataset
+
+------------------------------------------------------------------
+Summmary of Covid 19 classification:
+-----------------------------------
+
+For projects 1 and 2 
+learning_rate=1e-5,batch_size=2,epochs=30
+
+input size of image=(224,224,3)
+-----------------------------------------------------
+The pretrained models are trained with weights of 'imagenet'
+---------------------------------------------------------
+For project 1:
+
+0-Covid-19,1-Normal
+
+1.DenseNet201(high)
+2.VGG19(high)
+3.VGG16(high)
+
+all score 100% accuracy with specificity and sensitivity to be 100%
+
+recall,f1-score nd precision also scores 100%
+
+4.ResNet50 -accuracy of 86%
+
+5.Xception - accuracy of 91.7%
+
+6.InceptionResNet - accuracy of 68.3%(low)
+
+Here for these models F1-scores,sensitivity and specificity varies
+---------------------------------------------------------------------------
+
+For project 2
+
+I have trained the model using 'imagenet weights' and have used VGG19 model
+
+input size of image=(224,224,3)
+
+I have selected only AP,PA,AP Supine views and only X-ray images dropping the CT scans
+
+0-Covid-19,1-Other lung diseases
+
+With validation got an accuracy of 87%
+
+Without Validation got an accuracy of 85%
+
+-------------------------------------------------------------------------------
+
+For project 3:
+
+Here I used a dataset from kaggle and the covid pics were taken from Cohen ieee github repo and normal images from Chest X-ray (pneumonia) dataset-actually it is a fusion of project 1 and 2
+
+I have trained the model using 'imagenet weights' 
+
+input size of image=(224,224,3)
+
+epochs= 100
+lr = 1e-4
+BS = 16
+
+I have used InceptionV3 model and got me an accuracy of 99%
+
+
+
+IMPORTANT NOTE:
+For projects 1 and 2 , I have used 3-fold validation and took the average accuracy to tell the results.
+
+									   Thank you mam,
+
+                                                                     For giving me this opportunity
+
+
+
+
+
+
+
+
+
+
+
+
